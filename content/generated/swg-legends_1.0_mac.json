@@ -250,7 +250,7 @@
                 {"name":"Toggle Auto Aim", "mods":[]}
             ],
             "Z" : [
-                {"name":"Cycle Intented Target Outward", "mods":[]}
+                {"name":"Cycle Intended Target Outward", "mods":[]}
             ],
             "ZERO" : [
                 {"name":"Toolbar Bank 2 Slot 10", "mods":["SHIFT"]},
