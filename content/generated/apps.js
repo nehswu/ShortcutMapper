@@ -15,9 +15,9 @@ var sitedata_apps = [
     {
         name: "SWG Legends",
         data: {
-            "v1.0": {
-                "mac": "swg-legends_v1.0_mac.json",
-                "windows": "swg-legends_v1.0_windows.json",
+            "1.0": {
+                "mac": "swg-legends_1.0_mac.json",
+                "windows": "swg-legends_1.0_windows.json",
             },
         }
     },
