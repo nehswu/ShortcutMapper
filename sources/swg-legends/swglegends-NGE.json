@@ -373,8 +373,8 @@
                 "Ctrl + G"
             ],
             "Summon Radial Menu": [
-                "~ / '",
-                "~ / '"
+                "`",
+                "`"
             ],
             "Target Group Member 1": [
                 "F2",
@@ -529,8 +529,8 @@
                 "Ctrl + 9"
             ],
             "Toolbar Pane Next": [
-                "Ctrl + ~ / Ctrl + =",
-                "Ctrl + ~ / Ctrl + ="
+                "Ctrl + ` / Ctrl + =",
+                "Ctrl + ` / Ctrl + ="
             ],
             "Toolbar Pane Previous": [
                 "Ctrl + Tab / Ctrl + -",
@@ -1095,8 +1095,8 @@
                 ""
             ],
             "Summon Radial Menu": [
-                "~ / '",
-                "~ / '"
+                "` / '",
+                "` / '"
             ],
             "Toggle Buttonbar": [
                 "",
@@ -1207,8 +1207,8 @@
                 "Ctrl + 9"
             ],
             "Toolbar Pane Next": [
-                "Ctrl + ~ / Ctrl + =",
-                "Ctrl + ~ / Ctrl + ="
+                "Ctrl + ` / Ctrl + =",
+                "Ctrl + ` / Ctrl + ="
             ],
             "Toolbar Pane Previous": [
                 "Ctrl + Tab / Ctrl + -",

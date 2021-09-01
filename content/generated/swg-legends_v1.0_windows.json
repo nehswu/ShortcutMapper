@@ -10,6 +10,10 @@
                 {"name":"Turn Left", "mods":["CONTROL"]},
                 {"name":"Turn Left", "mods":[]}
             ],
+            "ACCENT_GRAVE" : [
+                {"name":"Summon Radial Menu", "mods":[]},
+                {"name":"Toolbar Pane Next", "mods":["CONTROL"]}
+            ],
             "ALT" : [
                 {"name":"Toggle Mouse Mode", "mods":[]}
             ],
@@ -192,9 +196,6 @@
                 {"name":"Momentary Run / Walk Toggle", "mods":["CONTROL"]},
                 {"name":"Momentary Run / Walk Toggle", "mods":[]}
             ],
-            "SINGLE_QUOTE" : [
-                {"name":"Summon Radial Menu", "mods":[]}
-            ],
             "SIX" : [
                 {"name":"Toolbar Bank 2 Slot 6", "mods":["SHIFT"]},
                 {"name":"Toolbar Pane 6", "mods":["CONTROL"]},
@@ -219,10 +220,6 @@
                 {"name":"Toolbar Bank 2 Slot 3", "mods":["SHIFT"]},
                 {"name":"Toolbar Pane 3", "mods":["CONTROL"]},
                 {"name":"Toolbar Slot 3", "mods":[]}
-            ],
-            "TILDE" : [
-                {"name":"Summon Radial Menu", "mods":[]},
-                {"name":"Toolbar Pane Next", "mods":["CONTROL"]}
             ],
             "TWO" : [
                 {"name":"Toolbar Bank 2 Slot 2", "mods":["SHIFT"]},
@@ -411,6 +408,10 @@
             ]
         },
         "Ground-UI" : {
+            "ACCENT_GRAVE" : [
+                {"name":"Summon Radial Menu", "mods":[]},
+                {"name":"Toolbar Pane Next", "mods":["CONTROL"]}
+            ],
             "ALT" : [
                 {"name":"Toggle Mouse Mode", "mods":[]}
             ],
@@ -501,10 +502,6 @@
                 {"name":"Toolbar Bank 2 Slot 3", "mods":["SHIFT"]},
                 {"name":"Toolbar Pane 3", "mods":["CONTROL"]},
                 {"name":"Toolbar Slot 3", "mods":[]}
-            ],
-            "TILDE" : [
-                {"name":"Summon Radial Menu", "mods":[]},
-                {"name":"Toolbar Pane Next", "mods":["CONTROL"]}
             ],
             "TWO" : [
                 {"name":"Toolbar Bank 2 Slot 2", "mods":["SHIFT"]},
