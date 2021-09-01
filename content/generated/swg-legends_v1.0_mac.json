@@ -1,0 +1,527 @@
+{
+    "name" : "SWG Legends",
+    "version" : "v1.0",
+    "os" : "mac",
+    "mods_used" : ["CONTROL", "SHIFT"],
+    "default_context" : "Ground-All",
+    "contexts" : {
+        "Ground-All" : {
+            "A" : [
+                {"name":"Turn Left", "mods":["CONTROL"]},
+                {"name":"Turn Left", "mods":[]}
+            ],
+            "ALT" : [
+                {"name":"Toggle Mouse Mode", "mods":[]}
+            ],
+            "C" : [
+                {"name":"Character Sheet", "mods":[]},
+                {"name":"Collections", "mods":["CONTROL", "SHIFT"]}
+            ],
+            "COMMA" : [
+                {"name":"Chat Font Smaller", "mods":["CONTROL"]}
+            ],
+            "D" : [
+                {"name":"Turn Right", "mods":["CONTROL"]},
+                {"name":"Turn Right", "mods":[]}
+            ],
+            "DOWN_ARROW" : [
+                {"name":"Walk Back", "mods":["CONTROL"]},
+                {"name":"Walk Back", "mods":[]}
+            ],
+            "E" : [
+                {"name":"Walk Right", "mods":["CONTROL"]},
+                {"name":"Walk Right", "mods":[]}
+            ],
+            "EIGHT" : [
+                {"name":"Toolbar Bank 2 Slot 8", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 8", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 8", "mods":[]}
+            ],
+            "ENTER" : [
+                {"name":"Collapse Chat Box", "mods":["CONTROL"]},
+                {"name":"Start Chat", "mods":[]}
+            ],
+            "EQUAL" : [
+                {"name":"Toolbar Bank 2 Slot 12", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane Next", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 12", "mods":[]}
+            ],
+            "ESCAPE" : [
+                {"name":"Clear Target/Menu Combo", "mods":[]},
+                {"name":"Game Menu", "mods":["SHIFT"]}
+            ],
+            "F1" : [
+                {"name":"Target Self", "mods":[]}
+            ],
+            "F2" : [
+                {"name":"Target Group Member 1", "mods":[]}
+            ],
+            "F3" : [
+                {"name":"Target Group Member 2", "mods":[]}
+            ],
+            "F4" : [
+                {"name":"Target Group Member 3", "mods":[]}
+            ],
+            "F5" : [
+                {"name":"Target Group Member 4", "mods":[]}
+            ],
+            "F6" : [
+                {"name":"Target Group Member 5", "mods":[]}
+            ],
+            "F7" : [
+                {"name":"Target Group Member 6", "mods":[]}
+            ],
+            "F8" : [
+                {"name":"Target Group Member 7", "mods":[]}
+            ],
+            "FIVE" : [
+                {"name":"Toolbar Bank 2 Slot 5", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 5", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 5", "mods":[]}
+            ],
+            "FOUR" : [
+                {"name":"Toolbar Bank 2 Slot 4", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 4", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 4", "mods":[]}
+            ],
+            "G" : [
+                {"name":"Start Group Chat", "mods":["CONTROL"]}
+            ],
+            "H" : [
+                {"name":"Knowledge Base Help", "mods":[]},
+                {"name":"Toggle HUD", "mods":["CONTROL", "SHIFT"]}
+            ],
+            "I" : [
+                {"name":"Inventory", "mods":[]}
+            ],
+            "J" : [
+                {"name":"Quest Journal", "mods":[]}
+            ],
+            "K" : [
+                {"name":"Datapad", "mods":[]}
+            ],
+            "L" : [
+                {"name":"Toggle Light", "mods":[]}
+            ],
+            "LEFT_ARROW" : [
+                {"name":"Turn Left", "mods":["CONTROL"]},
+                {"name":"Turn Left", "mods":[]}
+            ],
+            "M" : [
+                {"name":"Radar Map", "mods":[]}
+            ],
+            "MINUS" : [
+                {"name":"Toolbar Bank 2 Slot 11", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane Previous", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 11", "mods":[]}
+            ],
+            "NINE" : [
+                {"name":"Toolbar Bank 2 Slot 9", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 9", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 9", "mods":[]}
+            ],
+            "NUMLOCK" : [
+                {"name":"Autorun Toggle", "mods":["CONTROL"]},
+                {"name":"Autorun Toggle", "mods":[]}
+            ],
+            "NUMPAD_EIGHT" : [
+                {"name":"Pitch Camera Backward", "mods":[]}
+            ],
+            "NUMPAD_FIVE" : [
+                {"name":"Reset Camera Angle", "mods":[]}
+            ],
+            "NUMPAD_FOUR" : [
+                {"name":"Yaw Camera Left", "mods":[]}
+            ],
+            "NUMPAD_MINUS" : [
+                {"name":"Zoom Camera Out", "mods":[]}
+            ],
+            "NUMPAD_PERIOD" : [
+                {"name":"Chase Camera Toggle", "mods":[]}
+            ],
+            "NUMPAD_PLUS" : [
+                {"name":"Zoom Camera In", "mods":[]}
+            ],
+            "NUMPAD_SIX" : [
+                {"name":"Yaw Camera Right", "mods":[]}
+            ],
+            "NUMPAD_TWO" : [
+                {"name":"Pitch Camera Forward", "mods":[]}
+            ],
+            "NUMPAD_ZERO" : [
+                {"name":"Lock Camera Angle", "mods":[]}
+            ],
+            "O" : [
+                {"name":"Options", "mods":[]}
+            ],
+            "ONE" : [
+                {"name":"Toolbar Bank 2 Slot 1", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 1", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 1", "mods":[]}
+            ],
+            "P" : [
+                {"name":"Profession Window", "mods":[]}
+            ],
+            "PERIOD" : [
+                {"name":"Chat Font Bigger", "mods":["CONTROL"]}
+            ],
+            "Q" : [
+                {"name":"Walk Left", "mods":["CONTROL"]},
+                {"name":"Walk Left", "mods":[]}
+            ],
+            "R" : [
+                {"name":"Start Chat Reply", "mods":["CONTROL"]}
+            ],
+            "RIGHT_ARROW" : [
+                {"name":"Turn Right", "mods":["CONTROL"]},
+                {"name":"Turn Right", "mods":[]}
+            ],
+            "S" : [
+                {"name":"Walk Back", "mods":["CONTROL"]},
+                {"name":"Walk Back", "mods":[]}
+            ],
+            "SEMICOLON" : [
+                {"name":"Abilities & Commands", "mods":[]}
+            ],
+            "SEVEN" : [
+                {"name":"Toolbar Bank 2 Slot 7", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 7", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 7", "mods":[]}
+            ],
+            "SHIFT" : [
+                {"name":"Momentary Run / Walk Toggle", "mods":["CONTROL"]},
+                {"name":"Momentary Run / Walk Toggle", "mods":[]}
+            ],
+            "SINGLE_QUOTE" : [
+                {"name":"Summon Radial Menu", "mods":[]}
+            ],
+            "SIX" : [
+                {"name":"Toolbar Bank 2 Slot 6", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 6", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 6", "mods":[]}
+            ],
+            "SLASH" : [
+                {"name":"Start Chat Command", "mods":[]}
+            ],
+            "SPACE" : [
+                {"name":"Jump", "mods":["CONTROL"]},
+                {"name":"Jump", "mods":[]}
+            ],
+            "T" : [
+                {"name":"Start Chat Tell", "mods":["CONTROL"]}
+            ],
+            "TAB" : [
+                {"name":"Cycle Target In", "mods":["SHIFT"]},
+                {"name":"Cycle Target Out", "mods":[]},
+                {"name":"Toolbar Pane Previous", "mods":["CONTROL"]}
+            ],
+            "THREE" : [
+                {"name":"Toolbar Bank 2 Slot 3", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 3", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 3", "mods":[]}
+            ],
+            "TILDE" : [
+                {"name":"Summon Radial Menu", "mods":[]},
+                {"name":"Toolbar Pane Next", "mods":["CONTROL"]}
+            ],
+            "TWO" : [
+                {"name":"Toolbar Bank 2 Slot 2", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 2", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 2", "mods":[]}
+            ],
+            "U" : [
+                {"name":"Expertise Window", "mods":[]}
+            ],
+            "UP_ARROW" : [
+                {"name":"Walk Forward", "mods":["CONTROL"]},
+                {"name":"Walk Forward", "mods":[]}
+            ],
+            "V" : [
+                {"name":"Planetary Map", "mods":[]}
+            ],
+            "W" : [
+                {"name":"Walk Forward", "mods":["CONTROL"]},
+                {"name":"Walk Forward", "mods":[]}
+            ],
+            "X" : [
+                {"name":"Set Intended Target", "mods":[]}
+            ],
+            "Y" : [
+                {"name":"Toggle Auto Aim", "mods":[]}
+            ],
+            "Z" : [
+                {"name":"Cycle Intented Target Outward", "mods":[]}
+            ],
+            "ZERO" : [
+                {"name":"Toolbar Bank 2 Slot 10", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 10", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 10", "mods":[]}
+            ]
+        },
+        "Ground-Camera" : {
+            "NUMPAD_EIGHT" : [
+                {"name":"Pitch Camera Backward", "mods":[]}
+            ],
+            "NUMPAD_FIVE" : [
+                {"name":"Reset Camera Angle", "mods":[]}
+            ],
+            "NUMPAD_FOUR" : [
+                {"name":"Yaw Camera Left", "mods":[]}
+            ],
+            "NUMPAD_MINUS" : [
+                {"name":"Zoom Camera Out", "mods":[]}
+            ],
+            "NUMPAD_PERIOD" : [
+                {"name":"Chase Camera Toggle", "mods":[]}
+            ],
+            "NUMPAD_PLUS" : [
+                {"name":"Zoom Camera In", "mods":[]}
+            ],
+            "NUMPAD_SIX" : [
+                {"name":"Yaw Camera Right", "mods":[]}
+            ],
+            "NUMPAD_TWO" : [
+                {"name":"Pitch Camera Forward", "mods":[]}
+            ],
+            "NUMPAD_ZERO" : [
+                {"name":"Lock Camera Angle", "mods":[]}
+            ]
+        },
+        "Ground-Character" : {
+            "A" : [
+                {"name":"Turn Left", "mods":["CONTROL"]},
+                {"name":"Turn Left", "mods":[]}
+            ],
+            "D" : [
+                {"name":"Turn Right", "mods":["CONTROL"]},
+                {"name":"Turn Right", "mods":[]}
+            ],
+            "DOWN_ARROW" : [
+                {"name":"Walk Back", "mods":["CONTROL"]},
+                {"name":"Walk Back", "mods":[]}
+            ],
+            "E" : [
+                {"name":"Walk Right", "mods":["CONTROL"]},
+                {"name":"Walk Right", "mods":[]}
+            ],
+            "L" : [
+                {"name":"Toggle Light", "mods":[]}
+            ],
+            "LEFT_ARROW" : [
+                {"name":"Turn Left", "mods":["CONTROL"]},
+                {"name":"Turn Left", "mods":[]}
+            ],
+            "NUMLOCK" : [
+                {"name":"Autorun Toggle", "mods":["CONTROL"]},
+                {"name":"Autorun Toggle", "mods":[]}
+            ],
+            "Q" : [
+                {"name":"Walk Left", "mods":["CONTROL"]},
+                {"name":"Walk Left", "mods":[]}
+            ],
+            "RIGHT_ARROW" : [
+                {"name":"Turn Right", "mods":["CONTROL"]},
+                {"name":"Turn Right", "mods":[]}
+            ],
+            "S" : [
+                {"name":"Walk Back", "mods":["CONTROL"]},
+                {"name":"Walk Back", "mods":[]}
+            ],
+            "SHIFT" : [
+                {"name":"Momentary Run / Walk Toggle", "mods":["CONTROL"]},
+                {"name":"Momentary Run / Walk Toggle", "mods":[]}
+            ],
+            "SPACE" : [
+                {"name":"Jump", "mods":["CONTROL"]},
+                {"name":"Jump", "mods":[]}
+            ],
+            "UP_ARROW" : [
+                {"name":"Walk Forward", "mods":["CONTROL"]},
+                {"name":"Walk Forward", "mods":[]}
+            ],
+            "W" : [
+                {"name":"Walk Forward", "mods":["CONTROL"]},
+                {"name":"Walk Forward", "mods":[]}
+            ]
+        },
+        "Ground-Chat" : {
+            "COMMA" : [
+                {"name":"Chat Font Smaller", "mods":["CONTROL"]}
+            ],
+            "ENTER" : [
+                {"name":"Collapse Chat Box", "mods":["CONTROL"]},
+                {"name":"Start Chat", "mods":[]}
+            ],
+            "G" : [
+                {"name":"Start Group Chat", "mods":["CONTROL"]}
+            ],
+            "PERIOD" : [
+                {"name":"Chat Font Bigger", "mods":["CONTROL"]}
+            ],
+            "R" : [
+                {"name":"Start Chat Reply", "mods":["CONTROL"]}
+            ],
+            "SLASH" : [
+                {"name":"Start Chat Command", "mods":[]}
+            ],
+            "T" : [
+                {"name":"Start Chat Tell", "mods":["CONTROL"]}
+            ]
+        },
+        "Ground-Target" : {
+            "ESCAPE" : [
+                {"name":"Clear Target/Menu Combo", "mods":[]}
+            ],
+            "F1" : [
+                {"name":"Target Self", "mods":[]}
+            ],
+            "F2" : [
+                {"name":"Target Group Member 1", "mods":[]}
+            ],
+            "F3" : [
+                {"name":"Target Group Member 2", "mods":[]}
+            ],
+            "F4" : [
+                {"name":"Target Group Member 3", "mods":[]}
+            ],
+            "F5" : [
+                {"name":"Target Group Member 4", "mods":[]}
+            ],
+            "F6" : [
+                {"name":"Target Group Member 5", "mods":[]}
+            ],
+            "F7" : [
+                {"name":"Target Group Member 6", "mods":[]}
+            ],
+            "F8" : [
+                {"name":"Target Group Member 7", "mods":[]}
+            ],
+            "TAB" : [
+                {"name":"Cycle Target In", "mods":["SHIFT"]},
+                {"name":"Cycle Target Out", "mods":[]}
+            ],
+            "X" : [
+                {"name":"Set Intended Target", "mods":[]}
+            ],
+            "Y" : [
+                {"name":"Toggle Auto Aim", "mods":[]}
+            ],
+            "Z" : [
+                {"name":"Cycle Intented Target Outward", "mods":[]}
+            ]
+        },
+        "Ground-UI" : {
+            "ALT" : [
+                {"name":"Toggle Mouse Mode", "mods":[]}
+            ],
+            "C" : [
+                {"name":"Character Sheet", "mods":[]},
+                {"name":"Collections", "mods":["CONTROL", "SHIFT"]}
+            ],
+            "EIGHT" : [
+                {"name":"Toolbar Bank 2 Slot 8", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 8", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 8", "mods":[]}
+            ],
+            "EQUAL" : [
+                {"name":"Toolbar Bank 2 Slot 12", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane Next", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 12", "mods":[]}
+            ],
+            "ESCAPE" : [
+                {"name":"Game Menu", "mods":["SHIFT"]}
+            ],
+            "FIVE" : [
+                {"name":"Toolbar Bank 2 Slot 5", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 5", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 5", "mods":[]}
+            ],
+            "FOUR" : [
+                {"name":"Toolbar Bank 2 Slot 4", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 4", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 4", "mods":[]}
+            ],
+            "H" : [
+                {"name":"Knowledge Base Help", "mods":[]},
+                {"name":"Toggle HUD", "mods":["CONTROL", "SHIFT"]}
+            ],
+            "I" : [
+                {"name":"Inventory", "mods":[]}
+            ],
+            "J" : [
+                {"name":"Quest Journal", "mods":[]}
+            ],
+            "K" : [
+                {"name":"Datapad", "mods":[]}
+            ],
+            "M" : [
+                {"name":"Radar Map", "mods":[]}
+            ],
+            "MINUS" : [
+                {"name":"Toolbar Bank 2 Slot 11", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane Previous", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 11", "mods":[]}
+            ],
+            "NINE" : [
+                {"name":"Toolbar Bank 2 Slot 9", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 9", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 9", "mods":[]}
+            ],
+            "O" : [
+                {"name":"Options", "mods":[]}
+            ],
+            "ONE" : [
+                {"name":"Toolbar Bank 2 Slot 1", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 1", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 1", "mods":[]}
+            ],
+            "P" : [
+                {"name":"Profession Window", "mods":[]}
+            ],
+            "SEMICOLON" : [
+                {"name":"Abilities & Commands", "mods":[]}
+            ],
+            "SEVEN" : [
+                {"name":"Toolbar Bank 2 Slot 7", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 7", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 7", "mods":[]}
+            ],
+            "SINGLE_QUOTE" : [
+                {"name":"Summon Radial Menu", "mods":[]}
+            ],
+            "SIX" : [
+                {"name":"Toolbar Bank 2 Slot 6", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 6", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 6", "mods":[]}
+            ],
+            "TAB" : [
+                {"name":"Toolbar Pane Previous", "mods":["CONTROL"]}
+            ],
+            "THREE" : [
+                {"name":"Toolbar Bank 2 Slot 3", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 3", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 3", "mods":[]}
+            ],
+            "TILDE" : [
+                {"name":"Summon Radial Menu", "mods":[]},
+                {"name":"Toolbar Pane Next", "mods":["CONTROL"]}
+            ],
+            "TWO" : [
+                {"name":"Toolbar Bank 2 Slot 2", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 2", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 2", "mods":[]}
+            ],
+            "U" : [
+                {"name":"Expertise Window", "mods":[]}
+            ],
+            "V" : [
+                {"name":"Planetary Map", "mods":[]}
+            ],
+            "ZERO" : [
+                {"name":"Toolbar Bank 2 Slot 10", "mods":["SHIFT"]},
+                {"name":"Toolbar Pane 10", "mods":["CONTROL"]},
+                {"name":"Toolbar Slot 10", "mods":[]}
+            ]
+        }
+    }
+}

@@ -166,8 +166,8 @@ class IntermediateShortcutData(object):
             self.default_context = json_idata["default_context"]
             self.os = json_idata["os"]
 
-            for context_name, shortcuts in json_idata["contexts"].iteritems():
-                for shortcut_name, os_keys in shortcuts.iteritems():
+            for context_name, shortcuts in json_idata["contexts"].items():
+                for shortcut_name, os_keys in shortcuts.items():
                     self.add_shortcut(context_name, shortcut_name, os_keys[0], os_keys[1])
 
     def serialize(self, output_filepath):
@@ -257,7 +257,7 @@ class IntermediateDataExporter(object):
         shortcuts = []
         for combo in combo_parts:
             # TODO: skip mouse shortcuts for now
-            if 'click' in combo.lower() or 'drag' in combo.lower():
+            if 'click' in combo.lower() or 'drag' in combo.lower() or 'scroll' in combo.lower():
                 continue
 
             parts = combo.split("+")
