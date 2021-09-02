@@ -1,6 +1,6 @@
 function ShortcutMapper() {
     "use strict";
-    
+
     this.selectedApp = null;
     this.selectedAppData = null;
     this.selectedVersion = null;
@@ -18,18 +18,21 @@ function ShortcutMapper() {
         shortcut: null
     };
 
-    this.init = function () {
+    this.init = function() {
         var self = this,
-            hash = window.location.hash;
-        
+            hash = window.location.hash.substring(1).split('#');
+        console.log(hash);
+
         this.selectedApp = window.sitedata_apps[0];
 
         // Get selected app name from window hash
-        if (hash.length > 1) {
-            hash = hash.substring(1).toLowerCase();
-            for (var i=0; i<sitedata_apps.length; i++) {
+        if (hash) {
+            var hash_app = hash[0].toLowerCase();
+            for (var i = 0; i < sitedata_apps.length; i++) {
                 var name = sitedata_apps[i].name;
-                if (this._appNameToHash(name).toLowerCase() === hash) {
+                console.log(name + "::" + hash_app);
+                if (this._appNameToHash(name).toLowerCase() === hash_app) {
+                    console.log("found app");
                     this.selectedApp = sitedata_apps[i];
                 }
             }
@@ -70,8 +73,10 @@ function ShortcutMapper() {
         this.elemContextSelect.on("change", function() {
             self.selectedContext = $(this).val();
             self.elemKeyboard.keyboard("option", "context", self.selectedContext);
+
+            self._updateHash(self.selectedContext);
         });
-        $("nav button.os-radiobutton").click(function () {
+        $("nav button.os-radiobutton").click(function() {
             $("nav button.os-radiobutton").removeClass("checked");
             $(this).addClass("checked");
             self.selectedOS = $(this).attr("data-os");
@@ -83,7 +88,7 @@ function ShortcutMapper() {
         });
 
         // Load in the keyboard html and available shotcut contexts
-        this._fetchAppKeydataAndUpdate();
+        this._fetchAppKeydataAndUpdate(hash[1]);
     };
 
     this._initSearchBox = function() {
@@ -98,10 +103,10 @@ function ShortcutMapper() {
             // Escape key clears the search bar and hides results
             var updateHighlight = false;
             if (e.which === $.ui.keyCode.UP) {
-                self.selectedSearchResult = Math.max(self.selectedSearchResult-1, 0);
+                self.selectedSearchResult = Math.max(self.selectedSearchResult - 1, 0);
                 updateHighlight = true;
             } else if (e.which === $.ui.keyCode.DOWN) {
-                self.selectedSearchResult = Math.min(self.selectedSearchResult+1, self.maxSearchResults-1);
+                self.selectedSearchResult = Math.min(self.selectedSearchResult + 1, self.maxSearchResults - 1);
                 updateHighlight = true;
             }
 
@@ -128,6 +133,9 @@ function ShortcutMapper() {
     this._appNameToHash = function(name) {
         return name.replace(/ /g, "");
     };
+    this._appContextToHash = function(context) {
+        return context.replace(/ /g, "");
+    };
 
     this.selectApplication = function(name) {
         name = name.toLowerCase();
@@ -135,10 +143,9 @@ function ShortcutMapper() {
             return;
         }
 
-        for (var i=0; i<sitedata_apps.length; i++) {
+        for (var i = 0; i < sitedata_apps.length; i++) {
             if (name === sitedata_apps[i].name.toLowerCase()) {
                 this.selectedApp = sitedata_apps[i];
-                window.location.hash = "#" + this._appNameToHash(this.selectedApp.name);
                 document.title = this.selectedApp.name + " Shortcuts";
                 return;
             }
@@ -191,16 +198,16 @@ function ShortcutMapper() {
         var html_options = "";
         var max_option_length = 0;
         var final_selected = null;
-        for (var i=0; i<options.length; i++) {
+        for (var i = 0; i < options.length; i++) {
             var option = options[i];
-            
+
             if (option.toLowerCase() === String(selected).toLowerCase() || i === selected) {
                 html_options += '<option value="' + option + '" selected>' + option + '</option>';
                 final_selected = option;
             } else {
                 html_options += '<option value="' + option + '">' + option + '</option>';
             }
-            
+
             if (option.length > max_option_length) {
                 max_option_length = option.length;
             }
@@ -220,7 +227,7 @@ function ShortcutMapper() {
 
 
 
-    this._fetchAppKeydataAndUpdate = function() {
+    this._fetchAppKeydataAndUpdate = function(context = undefined) {
         var self = this;
         var filename = this.selectedApp.data[this.selectedVersion][this.selectedOS];
         $.ajax({
@@ -228,9 +235,26 @@ function ShortcutMapper() {
             dataType: "json"
         }).done(function (keydata) {
             self.selectedAppData = keydata;
-            self.selectedContext = keydata.default_context;
+            
+            var new_context = keydata.default_context;
+
+            // Select context if present from hash
+            if (context) {
+                var contexts = Object.keys(keydata.contexts);
+                for (var i = 0; i < contexts.length; i++) {
+                    var item = self._appNameToHash(contexts[i]);
+                    if (item.toLowerCase() === context.toLowerCase()) {
+                        new_context = contexts[i];
+                        break;
+                    };
+                };
+            };
+            self.selectedContext = new_context;
+            
             self._updateContextOptions(self.selectedContext);
             self._updateKeyboard();
+
+            self._updateHash(self.selectedContext);
         }).fail(function() {
             $("#keycontent").html("There is no data available for this OS or App Version (try selecting a different app version)");
         });
@@ -246,10 +270,10 @@ function ShortcutMapper() {
         $.ajax({
             url: "content/keyboards/" + filename,
             dataType: "html"
-        }).done(function (content) {
+        }).done(function(content) {
 
             // Strip stylesheet from content and add to page DOM
-            content = content.replace(/<link\b[^>]*>/i,"");
+            content = content.replace(/<link\b[^>]*>/i, "");
             $("#keycontent").html(content);
 
             // Init the keyboard widget
@@ -265,7 +289,7 @@ function ShortcutMapper() {
         });
     };
 
-    this._getCurrentOS = function () {
+    this._getCurrentOS = function() {
         var userAgent = window.navigator.userAgent,
             platform = window.navigator.platform,
             macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'iPhone', 'iPad', 'iPod'],
@@ -282,7 +306,15 @@ function ShortcutMapper() {
         return os;
     };
 
+    this._updateHash = function(context) {
+        var self = this;
+        var newhash = [
+            self._appNameToHash(self.selectedApp.name),
+            self._appContextToHash(self.selectedContext)
+        ].map(elm => '#' + elm);
 
+        window.location.hash = newhash.join('');
+    };
 
 
 
@@ -329,7 +361,7 @@ function ShortcutMapper() {
             if (!this.selectedAppData.contexts.hasOwnProperty(contextName)) {
                 continue;
             }
-            
+
             var context = self.selectedAppData.contexts[contextName];
             for (var keyName in context) {
                 if (!context.hasOwnProperty(keyName)) {
@@ -337,7 +369,7 @@ function ShortcutMapper() {
                 }
 
                 var shortcuts = context[keyName];
-                for (var i=0; i<shortcuts.length; i++) {
+                for (var i = 0; i < shortcuts.length; i++) {
                     var shortcut = shortcuts[i];
                     var name = shortcut.name;
                     if (regex.test(name)) {
@@ -359,7 +391,7 @@ function ShortcutMapper() {
 
                         // Keys
                         html += "<td>";
-                        for (var m=0; m<shortcut.mods.length; m++) {
+                        for (var m = 0; m < shortcut.mods.length; m++) {
                             var mod = shortcut.mods[m].toLowerCase();
                             html += "<span class='" + mod + "'>" + mod + "</span>";
                         }
@@ -393,7 +425,7 @@ function ShortcutMapper() {
         // Show results and center content
         if (numResults > 0) {
             results.html(html);
-            results.css("left", input.outerWidth()/2 - results.width()/2);
+            results.css("left", input.outerWidth() / 2 - results.width() / 2);
             results.show();
         } else if (numResults === 0) {
             this.selectedSearchResult = -1;
