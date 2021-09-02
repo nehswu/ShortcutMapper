@@ -1,14 +1,9 @@
 # -*- coding: utf-8 -*-
 import sys
-from bs4 import BeautifulSoup
-import codecs
-import re
 import argparse
 import logging
-import glob
 import os
 import sqlite3
-from sqlite3.dbapi2 import Error
 
 # Import common scripts
 CWD = os.path.dirname(os.path.abspath(__file__))

@@ -265,21 +265,21 @@ function ShortcutMapper() {
         });
     };
 
-    this._getCurrentOS = function() {
-        var appver = navigator.appVersion.toLowerCase();
-        if (appver.indexOf("win") !== -1) {
-            return "windows";
+    this._getCurrentOS = function () {
+        var userAgent = window.navigator.userAgent,
+            platform = window.navigator.platform,
+            macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'iPhone', 'iPad', 'iPod'],
+            windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+            os = null;
+
+        if (macosPlatforms.indexOf(platform) !== -1) {
+            os = 'mac';
+        } else if (windowsPlatforms.indexOf(platform) !== -1) {
+            os = 'windows';
+        } else {
+            os = 'linux';
         }
-        
-        if (appver.indexOf("mac") !== -1) {
-            return "mac";
-        }
-        
-        if (appver.indexOf("linux") !== -1) {
-            return "linux";
-        }
-        
-        return "windows";
+        return os;
     };
 
 
