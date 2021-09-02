@@ -21,7 +21,6 @@ function ShortcutMapper() {
     this.init = function() {
         var self = this,
             hash = window.location.hash.substring(1).split('#');
-        console.log(hash);
 
         this.selectedApp = window.sitedata_apps[0];
 
@@ -30,9 +29,7 @@ function ShortcutMapper() {
             var hash_app = hash[0].toLowerCase();
             for (var i = 0; i < sitedata_apps.length; i++) {
                 var name = sitedata_apps[i].name;
-                console.log(name + "::" + hash_app);
                 if (this._appNameToHash(name).toLowerCase() === hash_app) {
-                    console.log("found app");
                     this.selectedApp = sitedata_apps[i];
                 }
             }
@@ -290,19 +287,20 @@ function ShortcutMapper() {
     };
 
     this._getCurrentOS = function() {
-        var userAgent = window.navigator.userAgent,
-            platform = window.navigator.platform,
-            macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K', 'iPhone', 'iPad', 'iPod'],
-            windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            re_mac = /macintosh|macintel|macppc|mac68k|iphone|ipad|ipod/,
+            re_win = /win32|win64|windows|wince|android/,
             os = null;
 
-        if (macosPlatforms.indexOf(platform) !== -1) {
-            os = 'mac';
-        } else if (windowsPlatforms.indexOf(platform) !== -1) {
+        if (re_win.test(userAgent)) {
             os = 'windows';
-        } else {
-            os = 'linux';
+        } else if (re_mac.test(userAgent)) {
+            os = 'mac';
         }
+        else {
+            os = 'linux';
+        };
+
         return os;
     };
 

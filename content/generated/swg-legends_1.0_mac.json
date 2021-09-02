@@ -278,8 +278,8 @@
             "C" : [
                 {"name":"Character Sheet", "mods":["CONTROL"]},
                 {"name":"Collections", "mods":["CONTROL", "SHIFT"]},
-                {"name":"Target Nearest Capital Ship For Space Station", "mods":[]},
-                {"name":"Target Nearest Capital Ship Or Space Station And Comm It", "mods":["SHIFT"]}
+                {"name":"Target Nearest Capital Ship Or Space Station And Comm It", "mods":["SHIFT"]},
+                {"name":"Target Nearest Capital Ship Or Space Station", "mods":[]}
             ],
             "COMMA" : [
                 {"name":"Chat Font Smaller", "mods":["CONTROL"]},
@@ -310,7 +310,7 @@
                 {"name":"Start Chat", "mods":[]}
             ],
             "EQUAL" : [
-                {"name":"Ship Throttle Delta (Analog Stick-Axis)", "mods":[]}
+                {"name":"Ship Throttle Increase", "mods":[]}
             ],
             "ESCAPE" : [
                 {"name":"Clear Target/Menu Combo", "mods":[]},
@@ -556,14 +556,14 @@
             ],
             "UP_ARROW" : [
                 {"name":"Chat History Previous ", "mods":["CONTROL"]},
-                {"name":"Ship Throttle Delta (Analog Stick-Axis)", "mods":[]}
+                {"name":"Ship Throttle Increase", "mods":[]}
             ],
             "V" : [
                 {"name":"Ship Component Details Screen", "mods":[]},
                 {"name":"Space Zone Map", "mods":["CONTROL"]}
             ],
             "W" : [
-                {"name":"Ship Throttle Delta (Analog Stick-Axis)", "mods":[]}
+                {"name":"Ship Throttle Increase", "mods":[]}
             ],
             "X" : [
                 {"name":"Target Next Under Reticle", "mods":[]},

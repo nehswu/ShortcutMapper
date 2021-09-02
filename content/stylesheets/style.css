@@ -3,8 +3,8 @@ Sticky footer implemented like this:
 https://github.com/timothylong/Responsive-Sticky-Footer/blob/master/index.html
 */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
 
 html, body {
     height: 100%;
@@ -13,10 +13,11 @@ html, body {
 body {
     font-family: 'Open Sans', sans-serif;
     /* background: url('../images/background.png'); */
-    background: rgb(78,78,78);
+    /* background: rgb(78,78,78); */
     background: radial-gradient(circle, rgba(78,78,78,1) 0%, rgba(74,74,98,1) 35%, rgba(111,111,111,1) 100%);
     padding: 0;
     margin: 0;
+    -webkit-text-size-adjust: auto;
 }
 
 #mainwrap {
@@ -36,7 +37,7 @@ header {
 }
 
 header h1 {
-    font-style: italic;
+    font-style: normal;
     font-weight: 300;
     font-size: 1.8em;
     margin: 22px 0 2px 0;
@@ -367,7 +368,7 @@ nav button.os-linux b {
     list-style: none;
     padding: 0 4px;
     margin: 0;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 300;
     background-color: #f0f0f0;
     color: #444;
@@ -424,7 +425,7 @@ nav button.os-linux b {
 
 #keycontent {
     padding: 15px 11px 8px 14px;
-    background-color: #dbdbdb;
+    background-color: #9e9e9e;
     border-radius: 6px;
     box-shadow: inset 0px 0px 0px 1px #8b8b8b,
                 inset 0px 0px 0px 2px #f0f0f0,
@@ -537,9 +538,9 @@ div#keyboard button .label {
     position: absolute;
     top: 0;
     left: 0;
-    width: 48px;
+    width: 8px;
     padding: 2px 0 0 4px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     color: #6b6b6b;
     text-align: left;
@@ -554,8 +555,8 @@ div#keyboard button .shortcut {
     font-family: 'Lato', sans-serif;
     width: 90%;
     max-height: 32px;
-    padding: 0 3px 0 3px;
-    font-size: 9px;
+    padding: 0px 3px 0 3px;
+    font-size: 0.6vw;
     font-weight: 300;
     line-height: 8px;
     color: #ffffff;
@@ -567,6 +568,46 @@ div#keyboard button .shortcut {
     word-wrap: break-word;
 }
 
+div#keyboard button.nomod.hasitems:hover .shortcut,
+div#keyboard button.hasitems.alt:hover .shortcut,
+div#keyboard button.hasitems.control:hover .shortcut,
+div#keyboard button.hasitems.command:hover .shortcut,
+div#keyboard button.hasitems.shift:hover .shortcut,
+div#keyboard button.hasitems.other:hover .shortcut,
+div#keyboard button.hasitems.multi:hover .shortcut
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+    text-align: center;
+    font-size: 0.5vw;
+}
+
+/* div#keyboard button.nomod.hasitems:hover .label,
+div#keyboard button.hasitems.alt:hover .label,
+div#keyboard button.hasitems.control:hover .label,
+div#keyboard button.hasitems.command:hover .label,
+div#keyboard button.hasitems.shift:hover .label,
+div#keyboard button.hasitems.other:hover .label,
+div#keyboard button.hasitems.multi:hover .label
+{
+    font-size: 10px;
+    max-width: 24pt;
+} */
+
+div#keyboard button.nomod.hasitems:hover,
+div#keyboard button.hasitems.alt:hover,
+div#keyboard button.hasitems.control:hover,
+div#keyboard button.hasitems.command:hover,
+div#keyboard button.hasitems.shift:hover,
+div#keyboard button.hasitems.other:hover, 
+div#keyboard button.hasitems.multi:hover
+{
+    transition: transform .2s;
+    transform: scale(1.7);
+    z-index: 10;
+}
 
 /*** KEYBOARD BUTTON STYLES *****************************************************/
 
@@ -575,7 +616,7 @@ div#keyboard button.nomod .label {
     text-shadow: 0px 1px 0px rgb(80, 80, 80);
 }
 div#keyboard button.nomod {
-    background: #96A0AD;
+    background: #4a5c72;
     box-shadow: inset 0px 0px 0px 1px #5e6d7d,
                 inset 0px 0px 0px 2px #c1cad3,
                 0px 2px 0px 0px #758597,
@@ -644,7 +685,7 @@ div#keyboard button.control .label {
     text-shadow: 0px 1px 0px rgb(80, 80, 80);
 }
 div#keyboard button.control {
-    background: #de43a0;
+    background: #ce3e94;
     box-shadow: inset 0px 0px 0px 1px #9d1a69,
                 inset 0px 0px 0px 2px #e66cb6,
                 0px 2px 0px 0px #b11c74,
@@ -667,7 +708,7 @@ div#keyboard button.shift .label {
     text-shadow: 0px 1px 0px rgb(80, 80, 80);
 }
 div#keyboard button.shift {
-    background: #29b429;
+    background: #229422;
     box-shadow: inset 0px 0px 0px 1px #187618,
                 inset 0px 0px 0px 2px #59d859,
                 0px 2px 0px 0px #1e901e,
@@ -821,7 +862,7 @@ div#keyboard button.mod-shift.mod-active .label {
 }
 div#keyboard button.mod-shift:active,
 div#keyboard button.mod-shift.mod-active {
-    background: #29b429;
+    background: #229422;
     box-shadow: inset 0px 0px 0px 1px #187618,
                 inset 0px 0px 0px 2px #59d859,
                 0px 1px 0px 0px #1e901e,
